@@ -1,4 +1,4 @@
-package com.korea.kfood.springboot.web;
+package com.korea.kfood.springboot.web.controller;
 
 import com.korea.kfood.springboot.web.dto.HelloResponseDTO;
 import org.springframework.web.bind.annotation.GetMapping;
