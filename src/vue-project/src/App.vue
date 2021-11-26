@@ -1,12 +1,26 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/databinding">DataBinding</router-link> |
-    <router-link to="/databindinvif">데이타 바인딩브이 이프</router-link>
-  </div>
-  <router-view/>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  안녕하세요 최재윤입니다.
 </template>
+<script>
+import HelloWorld from "@/components/HelloWorld";
+import request from "request"
+
+export default {
+  name:'App',
+  components:{
+    HelloWorld
+  },
+  mounted() {
+    request('http://localhost:8080/api/home', function (error, response, body) {
+      window.console.log('에러남:', error);
+      window.console.log('상태코드 : ', response && response.statusCode);
+      window.console.log('body:', body);
+    })
+  }
+}
+</script>
 
 <style>
 #app {

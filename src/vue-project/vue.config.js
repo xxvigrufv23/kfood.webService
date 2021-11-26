@@ -1,6 +1,15 @@
+const path = require('path')
 
 module.exports = {
-    publicPath: '/resources/static',
-    // outputDir: '../src/main/resources/templates/static',
-    outputDir: '../main/webapp/resources/static'
-};
+    outputDir: path.resolve(__dirname, "../" + "main/resources/static"),
+
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://localhost:9000',
+                ws: true,
+                changeOrigin: true
+            },
+        }
+    }
+}
