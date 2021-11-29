@@ -1,5 +1,5 @@
 <template>
-  <h1>Hello, gslnbwobnewobnerojgerlgjkeg.je;lbjelgjeaglfamjwlgjweglkwjgmoiwrjboiwrjbgorejgnoa{{title}}!</h1>
+  <h1>Hello, gslnbwobnewobnerojgera{{title}}!</h1>
 
 </template>
 
