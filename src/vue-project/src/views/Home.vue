@@ -1,18 +1,16 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <title>홈  메인 페이지 입니다.</title>
+  <Footer />
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Footer from "@/components/Layout/Footer";
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Footer,
   }
 }
 </script>

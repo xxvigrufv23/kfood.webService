@@ -1,10 +1,15 @@
 <template>
-  <div id="nav">
-    <router-link to="/home">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/databinding">DataBinding</router-link>
-  </div>
-  <router-view/>
+    <div id="nav">
+      <router-link to="/home">K-food</router-link>  |
+      <router-link to="/about">소개</router-link>  |
+      <router-link to="/shopping">Shop</router-link>
+      <strong id="nav-right" style="position: inherit; margin-left:700px;">
+        <router-link to="/member/login">로그인</router-link> |
+        <router-link to="/member/signup">회원가입</router-link>
+      </strong>
+    </div>
+
+    <router-view/>
 </template>
 
 <style>
@@ -18,14 +23,24 @@
 
 #nav {
   padding: 30px;
+  background-color: #000000;
+  color: white;
+  word-spacing: 23px;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
 }
 
+#nav-right {
+  word-spacing: 23px;
+}
 #nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+<script>
+export default {
+}
+</script>

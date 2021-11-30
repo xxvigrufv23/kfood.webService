@@ -19,12 +19,22 @@ const routes = [
     {
         path: '/admin',
         name: 'Admin',
-        component: () => import('@/views/Admin')
+        component: () => import('@/views/admin/Admin')
     },
     {
-        path: '/databinding',
-        name: 'DataBinding',
-        component: () => import('@/views/DataBinding')
+        path: '/shopping',
+        name: 'Shopping',
+        component: () => import('@/views/Shopping')
+    },
+    {
+        path: '/member/login',
+        name: 'Login',
+        component: () => import('@/views/Login')
+    },
+    {
+        path: '/member/signup',
+        name: 'SignUp',
+        component: () => import('@/views/signup')
     }
 ]
 
