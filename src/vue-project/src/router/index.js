@@ -34,7 +34,17 @@ const routes = [
     {
         path: '/member/signup',
         name: 'SignUp',
-        component: () => import('@/views/signup')
+        component: () => import('@/views/Signup')
+    },
+    {
+        path: '/member/identify',
+        name: 'Identify',
+        component: () => import('@/views/Identify')
+    },
+    {
+        path: '/member/register',
+        name: 'Register',
+        component: () => import('@/views/register')
     }
 ]
 

@@ -7,7 +7,7 @@
     <section class="login-form-box">
       <form class="login-form-input-form">
         <section class="login-form-input-area">
-          <input id="login-form-input-email" type="email" placeholder="아이디(이메일)을 입력하세요" required="required">
+          <input id="login-form-input-email" type="email" placeholder="아이디(이메일)를 입력하세요" required="required">
           <br>
           <input id="login-form-input-password" type="password" placeholder="비밀번호를 입력하세요" required="required">
         </section>
@@ -15,12 +15,12 @@
       </form>
     </section>
     <section class="login-auth">
-        <p class="login-identify">아이디 / 비밀번호 찾기</p>
+        <router-link class="login-identify" to="/member/identify">아이디 / 비밀번호 찾기</router-link>
     </section>
     <p class="login-register">
       "K-Food가 처음이신가요?"
       <span>
-        <router-link to="/member/signup">회원가입</router-link>
+        <router-link to="/member/signup" style="color:red;">회원가입</router-link>
       </span>
     </p>
   </div>
@@ -40,8 +40,9 @@ export default {
   font-weight: bolder;
 }
 .login-subtitle {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bolder;
+  margin: 90px 166px 0px 0px;
 }
 #login-form-input-email {
   width: 250px;
@@ -61,5 +62,13 @@ export default {
   margin: 10px 0;
   background-color: #000;
   color: white;
+}
+.login-auth{
+  margin-top: 80px;
+  font-weight: bold;
+  color: black;
+}
+.login-register {
+  font-weight:bold;
 }
 </style>

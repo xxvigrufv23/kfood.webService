@@ -17,4 +17,14 @@ public class MemberController {
     public String signUp() {
         return "forward:/index.html";
     }
+
+    @GetMapping("/identify")
+    public String identify() {
+        return "forward:/index.html";
+    }
+
+    @GetMapping("/register")
+    public String register() {
+        return "forward:/index.html";
+    }
 }

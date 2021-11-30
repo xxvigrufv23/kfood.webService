@@ -1,12 +1,13 @@
 <template>
+<title class="register"></title>
 <div>
-  회원가입
+  레지스터
 </div>
 </template>
 
 <script>
 export default {
-  name: "signup"
+  name: "register"
 }
 </script>
 

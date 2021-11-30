@@ -31,6 +31,8 @@
 #nav a {
   font-weight: bold;
   color: white;
+  text-decoration: none;
+
 }
 
 #nav-right {
@@ -38,6 +40,7 @@
 }
 #nav a.router-link-exact-active {
   color: #42b983;
+  text-decoration: none;
 }
 </style>
 <script>
