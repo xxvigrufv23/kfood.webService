@@ -1,8 +1,8 @@
 <template>
     <div id="nav">
-      <router-link to="/home">K-food</router-link>  |
-      <router-link to="/about">소개</router-link>  |
-      <router-link to="/shopping">Shop</router-link>
+      <router-link  style="font-size: 25px;" to="/home">K-food</router-link>  |
+      <router-link  style="font-size: 25px;" to="/about">소개</router-link>  |
+      <router-link  style="font-size: 25px;" to="/shopping">Shop</router-link>
       <strong id="nav-right" style="position: inherit; margin-left:700px;">
         <router-link to="/member/login">로그인</router-link> |
         <router-link to="/member/signup">회원가입</router-link>

@@ -15,7 +15,7 @@
       </form>
     </section>
     <section class="login-auth">
-        <router-link class="login-identify" to="/member/identify">아이디 / 비밀번호 찾기</router-link>
+        <router-link class="login-identify" to="/member/identify" style="text-decoration: none;">아이디 / 비밀번호 찾기</router-link>
     </section>
     <p class="login-register">
       "K-Food가 처음이신가요?"
@@ -42,7 +42,7 @@ export default {
 .login-subtitle {
   font-size: 15px;
   font-weight: bolder;
-  margin: 90px 166px 0px 0px;
+  margin: 90px 166px 0 0;
 }
 #login-form-input-email {
   width: 250px;
