@@ -11,11 +11,18 @@
       </p>
     </div>
  </div>
+  <hr>
+  <Footer />
 </template>
 
 <script>
+import Footer from "@/components/Layout/Footer";
+
 export default {
   name: "Signup",
+  components: {
+    Footer
+  },
   methods: {
     memberRegister() {
       window.location.href=window.location.origin + "/member/register";
