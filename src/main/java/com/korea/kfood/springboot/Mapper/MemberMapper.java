@@ -1,4 +1,8 @@
 package com.korea.kfood.springboot.Mapper;
 
-public class MemberMapper {
+import com.korea.kfood.springboot.DTO.MemberDTO;
+
+public interface MemberMapper {
+
+    public void memberJoin(MemberDTO member);
 }
