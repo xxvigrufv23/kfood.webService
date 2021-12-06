@@ -5,6 +5,5 @@
 <mapper namespace="com.korea.kfood.mapper.MemberMapper">
     <insert id="memberJoin">
         insert into tbl_member values(#{memberId}, #{memberPw}, #{memberName}, #{memberAddr1}, #{memberAddr2}, #{memberPhone}, sysdate(), 0, 1)
-
     </insert>
 </mapper>
