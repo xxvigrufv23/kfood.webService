@@ -1,4 +1,4 @@
-package com.korea.kfood.springboot.service;
+package com.korea.kfood.springboot.Service;
 
 
 import com.korea.kfood.springboot.DTO.MemberDTO;

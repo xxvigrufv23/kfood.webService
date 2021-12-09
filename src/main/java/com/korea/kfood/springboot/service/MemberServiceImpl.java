@@ -1,4 +1,4 @@
-package com.korea.kfood.springboot.service;
+package com.korea.kfood.springboot.Service;
 
 import com.korea.kfood.springboot.DTO.MemberDTO;
 import com.korea.kfood.springboot.Mapper.MemberMapper;
@@ -6,10 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+public class MemberServiceImpl implements MemberService {
 
-public class MemberServiceImpl implements MemberService{
-
-//    @Autowired
+    @Autowired
     MemberMapper memberMapper;
 
     @Override
