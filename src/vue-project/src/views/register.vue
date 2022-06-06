@@ -12,7 +12,7 @@
             <p>이름</p>
           </div>
           <div class="register-input-content">
-            <input type="name" class="register-input-content-input">
+            <input type="name" v-bind="userName" class="register-input-content-input">
           </div>
         </div>
 
@@ -21,7 +21,7 @@
             <p>아이디(e-mail)</p>
           </div>
           <div class="register-input-content">
-            <input type="email" class="register-input-content-input">
+            <input type="email"  v-bind="userEmail" class="register-input-content-input">
           </div>
         </div>
 
@@ -30,7 +30,7 @@
             <p>비밀번호</p>
           </div>
           <div class="register-input-content">
-            <input type="password" class="register-input-content-input">
+            <input type="password" v-bind="userPassword" class="register-input-content-input">
           </div>
         </div>
 
@@ -39,7 +39,7 @@
             <p>비밀번호 확인</p>
           </div>
           <div class="register-input-content">
-            <input type="password" class="register-input-content-input">
+            <input type="password" v-bind="userConfPassword" class="register-input-content-input">
           </div>
         </div>
 
@@ -48,7 +48,7 @@
             <p>전화번호</p>
           </div>
           <div class="register-input-content">
-            <input type="tel" class="register-input-content-input">
+            <input type="tel" v-bind="userPhoneNumber" class="register-input-content-input">
           </div>
         </div>
 
@@ -57,14 +57,23 @@
             <p>자택 주소</p>
           </div>
           <div class="register-input-content">
-            <input type="text" class="register-input-content-input">
+            <input type="text" v-bind="userAddress" class="register-input-content-input">
+          </div>
+        </div>
+
+        <div class="register-input-line">
+          <div class="register-input-title">
+            <p>주소2</p>
+          </div>
+          <div class="register-input-content">
+            <input type="text" v-bind="userAddressTwo" class="register-input-content-input">
           </div>
         </div>
 
       </div>
       <div>
-        <button @click="registerCancle()">이전으로</button>
-        <button>가입완료</button>
+        <button @click="registerCancle">이전으로</button>
+        <button @click="registerAsMember">가입완료</button>
      </div>
     </section>
 
@@ -76,17 +85,41 @@
 
 <script>
 import Footer from "@/components/Layout/Footer";
+import axios from 'axios';
 
 
 export default {
-  name: "register",
+  name: "/register",
+  data() {
+    return {
+      userName:'',
+      userEmail:'',
+      userPassword:'',
+      userConfPassword:'',
+      userPhoneNumber:'',
+      userAddress:'',
+      userAddressTwo:'',
+    }
+  },
+
   components: {
     Footer
   },
   methods: {
     registerCancle() {
       window.location.href=window.location.origin + "/member/signup";
-    }
+    },
+    registerAsMember() {
+       axios.get('/member/register')
+          .then(function(response) {
+            console.log(response);
+            })
+            .catch(function(error) {
+            let errorObject=JSON.parse(JSON.stringify(error));
+            console.log(errorObject);
+            });
+    },
+
   },
 }
 </script>
